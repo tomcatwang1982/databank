@@ -1,0 +1,1 @@
+accessinterceptor=com.lakala.databus.dataaccess.api.extension.AuthInterceptor
