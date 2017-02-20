@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="target1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/data-main-consumer/target/data-main-consumer-1.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/data-main-consumer/target/data-main-consumer-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

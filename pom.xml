@@ -18,10 +18,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
     <groupId>com.lakala</groupId>
-    <artifactId>databus</artifactId>
+    <artifactId>databank</artifactId>
     <version>1.0</version>
     <packaging>pom</packaging>
-    <name>databus</name>
+    <name>databank</name>
     <url>http://maven.apache.org</url>
 	
 	<parent>
@@ -97,6 +97,7 @@
 
     </dependencies>
     <modules>
+		<module>data-main</module>
 		<module>data-access</module>
 		<module>data-verify</module>
 	</modules>
