@@ -27,7 +27,7 @@
     <!--uncomment this if you want to test dubbo's monitor-->
     <!--<dubbo:monitor protocol="registry"/>-->
 
-    <dubbo:annotation package="com.lakala.datamain.provider" />
+    <dubbo:annotation package="com.lakala.datamain.api.facade" />
     <!-- here we demonstrate both annotation-based and xml-based configs
     <dubbo:annotation package="com.alibaba.dubbo.demo.user.facade" />
 
@@ -47,18 +47,20 @@
     <!-- use tjws server -->
     <!--<dubbo:protocol name="rest" port="8888" server="tjws" contextpath="services"/>-->
 
-    <!-- use tomcat server
+    <!-- use tomcat server-->
     <dubbo:protocol name="rest" port="8888" threads="500" contextpath="services" server="tomcat" accepts="500"
                     extension="com.alibaba.dubbo.demo.extension.TraceInterceptor,
                     com.alibaba.dubbo.demo.extension.TraceFilter,
                     com.alibaba.dubbo.demo.extension.ClientTraceFilter,
                     com.alibaba.dubbo.demo.extension.DynamicTraceBinding,
                     com.alibaba.dubbo.demo.extension.CustomExceptionMapper,
-                    com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter"/>-->
-    <dubbo:protocol name="rest" port="9999" server="tomcat" contextpath="/" />
+                    com.alibaba.dubbo.rpc.protocol.rest.support.LoggingFilter"/>
     <bean id="dataAccessService" class="com.lakala.datamain.provider.DataAccessServiceImpl"/>
-    <dubbo:service interface="com.lakala.datamain.api.service.DataAccessService" ref="dataAccessService" protocol="rest" />
-
+    <bean id="dataAccessServiceFacade" class="com.lakala.datamain.provider.facade.DataAccessServiceFacade">
+        <property name="dataAccessService" ref="dataAccessService"/>
+    </bean>
+    <!--<dubbo:service interface="com.lakala.datamain.api.service.DataAccessService" ref="dataAccessService" protocol="rest" validation="true" />-->
+    <dubbo:service interface="com.lakala.datamain.api.facade.DataAccessFacade" ref="dataAccessServiceFacade"  protocol="rest" validation="true"/>
     <!-- use the external tomcat or other server with the servlet approach; the port and contextpath must be exactly the same as those in external server -->
     <!--<dubbo:protocol name="rest" port="8888" contextpath="services" server="servlet"/>
 

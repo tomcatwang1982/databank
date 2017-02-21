@@ -1,5 +1,10 @@
 package com.lakala.datamain.api.bean;
 
+import org.codehaus.jackson.annotate.JsonProperty;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlElement;
 import java.io.Serializable;
 
 /**
@@ -8,19 +13,32 @@ import java.io.Serializable;
 public class DataAccessBean implements Serializable {
 
     /** 业务 **/
+    @JsonProperty("product")
+    @NotNull
+    @Size(min = 6, max = 5)
     private String product;
 
     /** 模块 **/
+    @JsonProperty("module")
+    @NotNull
     private String module;
 
     /** auther **/
+    @JsonProperty("author")
+    @NotNull
     private String auther;
 
     /** 用户自定义对象 **/
+    @JsonProperty("customerbean")
     private CustomerBean customerBean;
 
     /** 获取系统对象 包括访问的客户端ip，是浏览器还是移动端访问等 **/
+    @JsonProperty("systembean")
     private SystemBean systemBean;
+
+    @JsonProperty("authbean")
+    @NotNull
+    private AuthBean authBean;
 
     public String getProduct() {
         return product;
@@ -62,6 +80,14 @@ public class DataAccessBean implements Serializable {
         this.systemBean = systemBean;
     }
 
+    public AuthBean getAuthBean() {
+        return authBean;
+    }
+
+    public void setAuthBean(AuthBean authBean) {
+        this.authBean = authBean;
+    }
+
     @Override
     public String toString() {
         return "DataAccessBean{" +
@@ -70,6 +96,7 @@ public class DataAccessBean implements Serializable {
                 ", auther='" + auther + '\'' +
                 ", customerBean=" + customerBean +
                 ", systemBean=" + systemBean +
+                ", authBean=" + authBean +
                 '}';
     }
 }

@@ -102,6 +102,7 @@ under the License.
       <module filepath="$PROJECT_DIR$/data-main-api/data-main-api.iml"/>
       <module filepath="$PROJECT_DIR$/data-main-provider/data-main-provider.iml"/>
       <module filepath="$PROJECT_DIR$/data-main-consumer/data-main-consumer.iml"/>
+      <module filepath="$PROJECT_DIR$/data-main-test/data-main-test.iml"/>
     </modules> 
   </component>  
   <UsedPathMacros> 

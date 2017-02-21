@@ -19,16 +19,28 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="lib" level="project" />
     <orderEntry type="library" exported="" name="target" level="project" />
     <orderEntry type="module" module-name="main1" exported="" />
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../../../data-main-api/target/data-main-api-1.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../lib" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../../lib" />
+        </SOURCES>
+        <jarDirectory url="file://$MODULE_DIR$/../../lib" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../lib" recursive="false" type="SOURCES" />
       </library>
     </orderEntry>
   </component>

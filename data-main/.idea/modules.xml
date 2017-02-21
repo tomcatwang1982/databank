@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/data-main-consumer/src/main/main.iml" filepath="$PROJECT_DIR$/data-main-consumer/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/data-main-api/src/main/main1.iml" filepath="$PROJECT_DIR$/data-main-api/src/main/main1.iml" />
       <module fileurl="file://$PROJECT_DIR$/data-main-provider/src/main/main2.iml" filepath="$PROJECT_DIR$/data-main-provider/src/main/main2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../data-common/src/main/main3.iml" filepath="$PROJECT_DIR$/../data-common/src/main/main3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-main-test/src/main/main4.iml" filepath="$PROJECT_DIR$/data-main-test/src/main/main4.iml" />
     </modules>
   </component>
 </project>

@@ -33,5 +33,6 @@
 		<module>data-main-api</module>
 		<module>data-main-provider</module>
 		<module>data-main-consumer</module>
+		<module>data-main-test</module>
 	</modules>
 </project>
